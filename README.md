@@ -24,6 +24,23 @@ where depth plays the role of time and each residual block defines a velocity fi
 
 For a two-class dataset, the inputs are embedded in three dimensions and the two classes are assigned targets above and below the original data plane. This makes the hidden-state trajectories directly visualizable.
 
+
+<p align="center">
+  <img src="figures/convex_hull.png" width="650" alt="Class separation and convex hull gap">
+</p>
+
+<p align="center">
+  <em>Figure 2. Evolution of class separation through network depth, measured using the convex-hull gap.</em>
+</p>
+
+<p align="center">
+  <img src="figures/full_hessian_spectra.png" width="650" alt="Hessian spectra of analytic and optimized solutions">
+</p>
+
+<p align="center">
+  <em>Figure 3. Hessian spectra of the analytic sample-wise and optimized collective solutions.</em>
+</p>
+
 ## Two solutions
 
 ### Analytic sample-wise solution
