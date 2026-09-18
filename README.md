@@ -1,6 +1,6 @@
 # Neuron Redundancy Biases ResNets Toward Collective Transport
 
-We why an overparameterized ResNet may learn a collective, class-level solution even when it has enough capacity to transport every training sample independently.
+An overparameterized ResNet may learn a collective, class-level solution even when it has enough capacity to transport every training sample independently.
 
 The central hypothesis is:
 
