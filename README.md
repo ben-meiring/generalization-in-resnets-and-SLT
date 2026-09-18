@@ -52,23 +52,10 @@ The analytic solution can be found by assigning straight line paths to each samp
   <em>Figure 3. Hessian spectra of the analytic sample-wise and optimized collective solutions.</em>
 </p>
 
-## Two solutions
 
-### Analytic sample-wise solution
+## The optimized collective solution
 
-When the residual-block width is at least the number of training samples, the neuron boundaries can be chosen so that every sample has a distinct activation pattern. The output weights can then assign each sample its own velocity.
-
-This produces an exact zero-loss solution in which every sample follows a prescribed straight trajectory to its target. The construction is highly sample-specific and finely tuned.
-
-### Optimized collective solution
-
-Standard endpoint training with Adam finds a qualitatively different solution:
-
-1. The samples reorganize until the two classes become approximately linearly separable.
-2. The classes then move collectively toward their targets.
-3. Only small within-class corrections remain.
-
-Thus, despite having enough capacity to interpolate sample by sample, the trained network discovers shared class-level dynamics.
+We find that 
 
 ## Evidence for neuron collapse
 
