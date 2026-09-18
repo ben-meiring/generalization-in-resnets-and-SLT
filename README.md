@@ -8,6 +8,7 @@ The central hypothesis is:
 2. **Neuron redundancy produces collective transport.**
 3. **Collective transport may support generalization.**
 
+
 ## Setup
 
 We can interpret a depth L ResNet as a discrete dynamical system,
@@ -91,11 +92,13 @@ Consistent with this picture, the optimized collective solution has:
 The current evidence therefore supports—but does not yet prove—the mechanism
 
 ```math
+\text{entropic bias}
+\longrightarrow
 \text{neuron redundancy}
 \longrightarrow
-\text{softer loss geometry}
+\text{collective transport}
 \longrightarrow
-\text{entropic preference for collective transport}.
+\text{improved generalization}.
 ```
 
 ## Main takeaway
