@@ -67,22 +67,19 @@ These neurons therefore behave approximately like copies of one effective class 
 
 ## Why redundancy may be preferred
 
-If $M$ neurons have identical activation patterns, the network depends only on one collective combination of their output weights. This results in one collective direction and $M-1$ flat relative directions in the loss-landscape, meaning that this redundant solution may corresponds to a larger volume of our parameter space.
+If $M$ neurons have identical activation patterns, the network depends only on one combination of their output weights. This results in one collective direction and $M-1$ flat directions in the loss-landscape, meaning that this solution may correspond to a larger volume of the parameter space.
 
-We can see 
+We can see this flatness emerge in the Hessian eigenvalues of our optimized solution, as compared to the sample-wise analytic solution:
 
 <br>
 <p align="center">
-  <img src="figures/full_hessian_spectra.png" width="650" alt="Hessian spectra of analytic and optimized solutions">
+  <img src="figures/full_hessian_spectra.png" width="450" alt="Hessian spectra of analytic and optimized solutions">
 </p>
 
 <p align="center">
   <em>Figure 3. Hessian spectra of the analytic sample-wise and optimized collective solutions.</em>
 </p>
 <br>
-
-
-Approximate neuron collapse turns these exactly flat directions into weakly curved directions. This predicts that the small Hessian eigenvalues should be controlled by deviations from the shared activation pattern.
 
 Consistent with this picture, the optimized collective solution has:
 
