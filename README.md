@@ -24,6 +24,14 @@ where depth plays the role of time and each residual block defines a velocity fi
 
 For a two-class dataset, the inputs are embedded in three dimensions and the two classes are assigned targets above and below the original data plane. This makes the hidden-state trajectories directly visualizable.
 
+<p align="center">
+  <img src="figures/moons_flow_vs_standard_resnet.gif" width="800" alt="Comparison of sample-wise and collective ResNet transport">
+</p>
+
+<p align="center">
+  <em>Figure 1. Analytic sample-wise transport (left) and optimized collective transport (right).</em>
+</p>
+
 
 <p align="center">
   <img src="figures/convex_hull.png" width="650" alt="Class separation and convex hull gap">
