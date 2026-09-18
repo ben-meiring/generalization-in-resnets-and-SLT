@@ -51,7 +51,25 @@ The optimized network appears to linearly separate the samples in the $xy$-plane
 </p>
 <br>
 
-Near the depth at which the classes become linearly separable, many neurons begin to separate the classes individually. This means that the neurons activate class-wise instead of sample-wise. Because many neurons overlap, they become degenerate. The activation matrix restricted to these neurons is approximately low rank, with one dominant singular mode.
+Near the depth at which the classes become linearly separable, many neurons begin to separate the classes individually. This means that the neurons activate class-wise instead of sample-wise. Because many neurons overlap, they become degenerate. 
+
+<br>
+<p align="center">
+  <img src="figures/neuron_collapse.png" width="700" alt="Class-separating neurons and neuron-collapse diagnostics">
+</p>
+
+<p align="center">
+  <em>Class-separating neurons become approximately redundant, with one dominant activation mode and small subleading corrections.</em>
+</p>
+<br>
+
+These neurons therefore behave approximately like copies of one effective class neuron. The leading mode generates collective class motion, while subleading modes permit smaller within-class adjustments.
+
+## Why redundancy may be preferred
+
+If $M$ neurons have identical activation patterns, the network depends only on one collective combination of their output weights. This results in one collective direction and $M-1$ flat relative directions in the loss-landscape, meaning that this redundant solution may corresponds to a larger volume of our parameter space.
+
+We can see 
 
 <br>
 <p align="center">
@@ -63,23 +81,6 @@ Near the depth at which the classes become linearly separable, many neurons begi
 </p>
 <br>
 
-<br>
-<p align="center">
-  <img src="figures/neuron_collapse.png" width="700" alt="Class-separating neurons and neuron-collapse diagnostics">
-</p>
-
-<p align="center">
-  <em>Class-separating neurons become approximately redundant, with one dominant activation mode and small subleading corrections.</em>
-</p>
-
-<br>
-
-
-These neurons therefore behave approximately like copies of one effective class gate. The leading mode generates collective class motion, while subleading modes permit smaller within-class adjustments.
-
-## Why redundancy may be preferred
-
-If $M$ neurons have identical activation patterns, the network depends only on one collective combination of their output weights. Redistributing this contribution among the neurons leaves the represented function unchanged, producing one collective direction and $M-1$ flat relative directions.
 
 Approximate neuron collapse turns these exactly flat directions into weakly curved directions. This predicts that the small Hessian eigenvalues should be controlled by deviations from the shared activation pattern.
 
