@@ -10,7 +10,7 @@ The central hypothesis is:
 
 ## Setup
 
-We interpret a depth-$L$ ResNet as a discrete dynamical system,
+We can interpret a depth L ResNet as a discrete dynamical system,
 
 ```math
 h^{(\ell+1)}
@@ -22,7 +22,7 @@ h^{(\ell)}
 
 where depth plays the role of time and each residual block defines a velocity field in representation space.
 
-For a two-class dataset, the inputs are embedded in three dimensions and the two classes are assigned targets above and below the original data plane. This makes the hidden-state trajectories directly visualizable.
+For a two-class crescent-moon dataset, we embed the two-dimensional inputs in the $z=0$ plane and assign targets at $z=1$ for class A and $z=-1$ for class B.
 
 <p align="center">
   <img src="figures/moons_flow_vs_standard_resnet.gif" width="800" alt="Comparison of sample-wise and collective ResNet transport">
