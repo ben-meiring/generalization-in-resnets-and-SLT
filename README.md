@@ -22,8 +22,9 @@ h^{(\ell)}
 
 where depth plays the role of time and each residual block defines a velocity field in representation space.
 
-For a two-class crescent-moon dataset, we embed the two-dimensional inputs in the $z=0$ plane and assign targets at $z=1$ for class A and $z=-1$ for class B.
+For a two-class crescent-moon dataset, we embed the two-dimensional inputs in the $z=0$ plane and assign targets at $z=1$ for class A (red) and $z=-1$ for class B (blue). We compare the network optimized solution (right) to an analytic solution (left) in Figure 1 below.
 
+<br>
 <p align="center">
   <img src="figures/moons_flow_vs_standard_resnet.gif" width="800" alt="Comparison of sample-wise and collective ResNet transport">
 </p>
@@ -31,7 +32,9 @@ For a two-class crescent-moon dataset, we embed the two-dimensional inputs in th
 <p align="center">
   <em>Figure 1. Analytic sample-wise transport (left) and optimized collective transport (right).</em>
 </p>
+<br>
 
+The analytic solution can be found by assigning straight line paths to each sample and evolving them in $l$ towards their targets. The optimized network instead appears to cluster the samples into classes first, and then evolve them collectively towards the target.
 
 <p align="center">
   <img src="figures/convex_hull.png" width="650" alt="Class separation and convex hull gap">
