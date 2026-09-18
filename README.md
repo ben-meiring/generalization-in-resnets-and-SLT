@@ -52,6 +52,18 @@ The analytic solution can be found by assigning straight line paths to each samp
   <em>Figure 3. Hessian spectra of the analytic sample-wise and optimized collective solutions.</em>
 </p>
 
+<br>
+
+<p align="center">
+  <img src="figures/neuron_collapse.png" width="700" alt="Class-separating neurons and neuron-collapse diagnostics">
+</p>
+
+<p align="center">
+  <em>Class-separating neurons become approximately redundant, with one dominant activation mode and small subleading corrections.</em>
+</p>
+
+<br>
+
 
 ## The optimized collective solution
 
