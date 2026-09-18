@@ -34,16 +34,26 @@ For a two-class crescent-moon dataset, we embed the two-dimensional inputs in th
 </p>
 <br>
 
-The analytic solution can be found by assigning straight line paths to each sample and evolving them in $l$ towards their targets. The optimized network instead appears to cluster the samples into classes first, and then evolve them collectively towards the target.
+The analytic solution can be found by assigning straight line paths to each sample and evolving them in $l$ towards their targets. The neurons separate each sample and evolve them independently, clearly being fine-tuned. The optimized network instead appears to cluster the samples into classes first, and then evolves them collectively towards the target.
 
+
+## Evidence of clustering and neuron collapse
+
+The optimized network appears to linearly separate the samples in the $xy$-plane before evolving the clusters through $z$ to their targets:
+
+<br>
 <p align="center">
-  <img src="figures/convex_hull.png" width="650" alt="Class separation and convex hull gap">
+  <img src="figures/convex_hull.png" width="450" alt="Class separation and convex hull gap">
 </p>
 
 <p align="center">
   <em>Figure 2. Evolution of class separation through network depth, measured using the convex-hull gap.</em>
 </p>
+<br>
 
+Near the depth at which the classes become linearly separable, many neurons begin to separate the classes individually. This means that the neurons activate class-wise instead of sample-wise. Because many neurons overlap, they become degenerate. The activation matrix restricted to these neurons is approximately low rank, with one dominant singular mode.
+
+<br>
 <p align="center">
   <img src="figures/full_hessian_spectra.png" width="650" alt="Hessian spectra of analytic and optimized solutions">
 </p>
@@ -51,9 +61,9 @@ The analytic solution can be found by assigning straight line paths to each samp
 <p align="center">
   <em>Figure 3. Hessian spectra of the analytic sample-wise and optimized collective solutions.</em>
 </p>
-
 <br>
 
+<br>
 <p align="center">
   <img src="figures/neuron_collapse.png" width="700" alt="Class-separating neurons and neuron-collapse diagnostics">
 </p>
@@ -64,14 +74,6 @@ The analytic solution can be found by assigning straight line paths to each samp
 
 <br>
 
-
-## The optimized collective solution
-
-We find that 
-
-## Evidence for neuron collapse
-
-Near the depth at which the classes become linearly separable, many neurons begin to separate the classes individually. Their activation patterns are also strongly aligned: the activation matrix restricted to these neurons is approximately low rank, with one dominant singular mode.
 
 These neurons therefore behave approximately like copies of one effective class gate. The leading mode generates collective class motion, while subleading modes permit smaller within-class adjustments.
 
