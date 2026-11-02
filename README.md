@@ -40,7 +40,7 @@ The analytic solution can be found by assigning straight line paths to each samp
 
 ## Evidence of clustering and neuron collapse
 
-The optimized network appears to linearly separate the samples in the $xy$-plane before evolving the clusters through $z$ to their targets:
+The optimized network appears to linearly separate the samples in the $$xy$$-plane before evolving the clusters through $z$ to their targets:
 
 <br>
 <p align="center">
